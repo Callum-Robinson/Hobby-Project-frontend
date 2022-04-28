@@ -20,9 +20,14 @@
             if (response.ok) return response.json()
             else throw new Error('Something went wrong');
         }).then(characters => {
-            renderCharacterTable
+            renderCharacterTable(characters, dataTable);
+        }).catch(error => {
+            console.error(error);
         })
     }
+
+    readAllCharacters();
+
     requestSelector.addEventListener('change', function(event) {
         if (this.value == 'ALLCHARACTERS') {
             toggleIdVisibility(false);
