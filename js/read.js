@@ -23,7 +23,20 @@
             renderCharacterTable(characters, dataTable);
         }).catch(error => {
             console.error(error);
-        })
+        });
+    }
+
+    function readCharacterById() {
+        fetch (`http://localhost:8080/character/${id.value}`, {
+            method: 'GET'
+        }).then(response => {
+            if (response.ok) return response.json()
+            else throw new Error('Something went wrong');
+        }).then(characters => {
+            renderCharacterTable(characters, dataTable);
+        }).catch(error => {
+            console.error(error);
+        });
     }
 
     readAllCharacters();
