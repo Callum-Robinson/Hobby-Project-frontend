@@ -3,7 +3,7 @@
     const dataTable = document.querySelector('#data-table');
     const characterForm = document.querySelector('#character-info');
     const weaponForm = document.querySelector('#weapon-info');
-    const id = document.querySelector('id');
+    const id = document.querySelector('#id');
 
     function toggleForm(formWanted) {
         if (formWanted == "Character") {
@@ -74,4 +74,17 @@
             console.error(error);
         });
     }
-});
+
+    function handleCharacterFormSubmission(event) {
+        event.preventDefault();
+        updateCharacter();
+    }
+
+    function handleWeaponFormSubmission(event) {
+        event.preventDefault();
+        updateWeapon();
+    }
+
+    characterForm.addEventListener('submit', handleCharacterFormSubmission);
+    weaponForm.addEventListener('submit', handleWeaponFormSubmission);
+})();
