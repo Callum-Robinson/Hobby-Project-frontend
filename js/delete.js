@@ -17,7 +17,18 @@
         });
     }
     
-
+    function deleteWeapon() {
+        fetch (`http://localhost:8080/weapon/${id.value}`, {
+            method: 'DELETE'
+        }).then(response => {
+            if (response.ok) return response.json();
+            else throw new Error('Something went wrong');
+        }).then(weapon => {
+            renderWeaponTable([weapon], dataTable);
+        }).catch(error => {
+            console.error(error);
+        });
+    }
 
 
 })();
