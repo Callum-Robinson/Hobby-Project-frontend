@@ -32,15 +32,15 @@
         }).then(response => {
             if (response.ok) return response.json()
             else throw new Error('Something went wrong');
-        }).then(characters => {
-            renderCharacterTable(characters, dataTable);
+        }).then(character => {
+            renderCharacterTable([character], dataTable);
         }).catch(error => {
             console.error(error);
         });
     }
 
     function readCharactersWeapons() {
-        fetch (`https//localhost:8080/${id.value}/weapons`, {
+        fetch (`http://localhost:8080/character/${id.value}/weapons`, {
             method: 'GET'
         }).then(response => {
             if (response.ok) return response.json()
@@ -53,7 +53,7 @@
     }
 
     function readALLWeapons() {
-        fetch (`https//localhost:8080/weapon`, {
+        fetch (`http://localhost:8080/weapon`, {
             method: 'GET'
         }).then(response => {
             if (response.ok) return response.json()
@@ -66,13 +66,13 @@
     }
 
     function readWeaponById() {
-        fetch (`https//localhost:8080/weapon/${id.value}`, {
+        fetch (`http://localhost:8080/weapon/${id.value}`, {
             method: 'GET'
         }).then(response => {
             if (response.ok) return response.json()
             else throw new Error('Something went wrong');
-        }).then(weapons => {
-            renderWeaponTable(weapons, dataTable);
+        }).then(weapon => {
+            renderWeaponTable([weapon], dataTable);
         }).catch(error => {
             console.error(error);
         });
@@ -92,5 +92,14 @@
         } else if (this.value == 'IDWEAPON') {
             toggleIdVisibility(true);
         }
+    });
+
+    dataForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (requestSelector.value == 'ALLCHARACTERS') readAllCharacters();
+        else if (requestSelector.value == 'IDCHARACTER') readCharacterById();
+        else if (requestSelector.value == 'CHARACTERWEAPONS') readCharactersWeapons();
+        else if (requestSelector.value == 'ALLWEAPONS') readALLWeapons();
+        else if (requestSelector.value == 'IDWEAPON') readWeaponById();
     });
 })();
