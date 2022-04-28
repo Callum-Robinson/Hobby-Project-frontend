@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav>
+        <a id="toggle">MENU</a>
+        <a class="nav-link " href="../index.html">HOME</a>
+        <a class="nav-link" href="./create.html">CREATE</a>
+        <a class="nav-link" href="./read.html">READ</a>
+        <a class="nav-link" href="./update.html">UPDATE</a>
+        <a class="nav-link" href="./delete.html">DELETE</a>
+    </nav>
+
+    <header>
+        <h1>Create Characters and Weapons</h1>
+        <p>Add your ideas to the app here</p>
+    </header>
+
+    <div class="container">
+        <section id="banner">
+            <img src="https://media.dnd.wizards.com/styles/news_banner_header/public/images/head-banner/bg-heroes_0.jpg" alt="Dnd banner" width="100%">
+        </section>
+        <main class="container">
+            <form id="data-form" class="container">
+                <fieldset id="which-table">
+                    <legend>What would you like?</legend>
+                    <label for="method">Character or Weapon:</label>
+                    <select name="method" id="method">
+                        <option value="Character">Create a Character</option>
+                        <option value="Weapon">Create a Weapon</option>
+                    </select>
+                </fieldset>
+
+                <fieldset id="character-info">
+                    <legend>Character Information</legend>
+
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" required><br>
+
+                    <label for="race">Race:</label>
+                    <input type="text" name="race" id="race" required><br>
+
+                    <label for="subrace">Subrace:</label>
+                    <input type="text" name="subrace" id="subrace"><br>
+
+                    <label for="class">Class:</label>
+                    <input type="text" name="class" id="class" required><br>
+
+                    <label for="level">Level:</label>
+                    <input type="number" name="level" id="level" min="1" max="20"><br>
+
+                    <label for="archetype">Archetype:</label>
+                    <input type="text" name="archetype" id="archetype"><br>
+
+                    <label for="background">Background:</label>
+                    <input type="text" name="background" id="background"><br>
+                </fieldset>
+
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+    </div>
+
+    <footer>
+        <p><small>Callum Robinson - Copyright &copy; 2022</small></p>
+    </footer>
+
+    <script src="./js/navbar.js"></script>
+
+</body>
+</html>
