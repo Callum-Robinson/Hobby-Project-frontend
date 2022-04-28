@@ -54,4 +54,24 @@
             console.error(error);
         });
     }
+
+    function updateWeapon() {
+        const weaponData = new FormData(weaponForm);
+        const weaponFormDataObject = Object.fromEntries(weaponData.entries())
+
+        fetch(`http://localhost:8080/weapon/${id.value}`, {
+            method: 'PUT',
+            body: JSON.stringify(createWeaponFromFormObj(weaponFormDataObject)),
+            headers: {
+                'Content-type': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) return response.json();
+            else throw new Error("Something went wrong");
+        }).then(weapon => {
+            renderWeaponTable([weapon], dataTable);
+        }).catch(error => {
+            console.error(error);
+        });
+    }
 });
