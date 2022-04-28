@@ -30,5 +30,9 @@
         });
     }
 
-
+    dataForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        if (requestSelector.value == 'CHARACTER') deleteCharacter();
+        else if (requestSelector.value == 'WEAPON') deleteWeapon();
+    });
 })();
