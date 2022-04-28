@@ -82,7 +82,7 @@
 
     function handleWeaponFormSubmission(event) {
         event.preventDefault();
-        createWeaponFromFormObj();
+        createWeapon();
     }
 
     characterForm.addEventListener('submit', handleCharacterFormSubmission);
