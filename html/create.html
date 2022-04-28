@@ -76,6 +76,9 @@
                 <fieldset>
                     <legend>Weapon Information</legend>
 
+                    <label for="character_id">Character Id:</label>
+                    <input type="number" name="character_id" id="character_id" required placeholder="Char id"><br>
+
                     <label for="name">Name:</label>
                     <input type="text" name="name" id="name" required maxlength="64" size="32" placeholder="Weapon Name"><br>
 
@@ -102,9 +105,10 @@
 
                     <label for="additional_abilities">Additional Abilities</label>
                     <input type="text" name="additional_abilities" id="additional_abilities" max="512" size="64" placeholder="Weapon Additional Abilities"><br>
+
+                    <button type="submit">Submit</button>
                 </fieldset>
 
-                <button type="submit">Submit</button>
             </form>
         </main>
     </div>
@@ -116,6 +120,7 @@
     <script src="../js/navbar.js"></script>
     <script src="../js/table-manager.js"></script>
     <script src="../js/character.js"></script>
+    <script src="../js/weapon.js"></script>
     <script src="../js/create.js"></script>
 </body>
 </html>
