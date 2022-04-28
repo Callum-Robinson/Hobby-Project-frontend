@@ -23,4 +23,35 @@
             toggleForm("Weapon")
         }
     });
+
+    function createCharacterFromFormObj(dataObject) {
+        const character = new Character(dataObject.name, dataObject.race, dataObject.subrace, dataObject.character_class, dataObject.level, dataObject.archetype, dataObject.background);
+        return character;
+    }
+
+    function createWeaponFromFormObj(dataObject) {
+        const character = new Character(dataObject.name, dataObject.race, dataObject.subrace, dataObject.character_class, dataObject.level, dataObject.archetype, dataObject.background);
+        const weapon = new Weapon(dataObject.name, dataObject.base_weapon, dataObject.weapon_type, dataObject.rarity, dataObject.cost, dataObject.damage, dataObject.damage_type, dataObject.properties, dataObject.additional_abilities);
+        return weapon;
+    }
+
+    function updateCharacter() {
+        const characterData = new FormData(characterForm);
+        const characterFormDataObject = Object.fromEntries(characterData.entries())
+
+        fetch(`http://localhost:8080/character/${id.value}`, {
+            method: 'PUT',
+            body: JSON.stringify(createCharacterFromFormObj(characterFormDataObject)),
+            headers: {
+                'Content-type': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) return response.json();
+            else throw new Error("Something went wrong");
+        }).then(character => {
+            renderCharacterTable([character], dataTable);
+        }).catch(error => {
+            console.error(error);
+        });
+    }
 });
