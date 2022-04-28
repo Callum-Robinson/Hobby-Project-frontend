@@ -42,25 +42,56 @@
                     <legend>Character Information</legend>
 
                     <label for="name">Name:</label>
-                    <input type="text" name="name" id="name" required><br>
+                    <input type="text" name="name" id="name" required minlength="3" maxlength="64" size="32" placeholder="Character Name"><br>
 
                     <label for="race">Race:</label>
-                    <input type="text" name="race" id="race" required><br>
+                    <input type="text" name="race" id="race" required minlength="3" maxlength="20" size="20" placeholder="Character Race"><br>
 
                     <label for="subrace">Subrace:</label>
-                    <input type="text" name="subrace" id="subrace"><br>
+                    <input type="text" name="subrace" id="subrace" maxlength="64" size="32" placeholder="Character Subrace"><br>
 
-                    <label for="class">Class:</label>
-                    <input type="text" name="class" id="class" required><br>
+                    <label for="character_class">Class:</label>
+                    <input type="text" name="character_class" id="character_class" required minlength="4" maxlength="20" size="20" placeholder="Character Class"><br>
 
                     <label for="level">Level:</label>
-                    <input type="number" name="level" id="level" min="1" max="20"><br>
+                    <input type="number" name="level" id="level" min="1" max="20" placeholder="Level"><br>
 
                     <label for="archetype">Archetype:</label>
-                    <input type="text" name="archetype" id="archetype"><br>
+                    <input type="text" name="archetype" id="archetype" maxlength="64" size="32" placeholder="Character Archetype"><br>
 
                     <label for="background">Background:</label>
-                    <input type="text" name="background" id="background"><br>
+                    <input type="text" name="background" id="background" maxlength="64" size="32" placeholder="Character Background"><br>
+                </fieldset>
+
+                <fieldset id="weapon-info" class="hide">
+                    <legend>Weapon Information</legend>
+
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name" required maxlength="64" size="32" placeholder="Weapon Name"><br>
+
+                    <label for="base_weapon">Base Weapon:</label>
+                    <input type="text" name="base_weapon" id="base_weapon" required max="64" size="32" placeholder="Base Weapon"><br>
+
+                    <label for="weapon_type">Weapon Type:</label>
+                    <input type="text" name="weapon_type" id="weapon_type" required max="64" size="32" placeholder="Weapon Type"><br>
+
+                    <label for="rarity">Rarity:</label>
+                    <input type="text" name="rarity" id="rarity" max="20" size="20" placeholder="Weapon Rarity"><br>
+
+                    <label for="cost">Cost:</label>
+                    <input type="text" name="cost" id="cost" required max="20" size="20" placeholder="Weapon Cost"><br>
+
+                    <label for="damage">Damage:</label>
+                    <input type="text" name="damage" id="damage" required max="20" size="20" placeholder="Weapon Damage"><br>
+
+                    <label for="damage_type">Damage Type:</label>
+                    <input type="text" name="damage_type" id="damage_type" required max="64" size="32" placeholder="Damage Type"><br>
+
+                    <label for="properties">Properties:</label>
+                    <input type="text" name="properties" id="properties" max="256" size="64" placeholder="Weapon Properties"><br>
+
+                    <label for="additional_abilities">Additional Abilities</label>
+                    <input type="text" name="additional_abilities" id="additional_abilities" max="512" size="64" placeholder="Weapon Additional Abilities"><br>
                 </fieldset>
 
                 <button type="submit">Submit</button>
