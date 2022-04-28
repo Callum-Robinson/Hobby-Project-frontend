@@ -77,6 +77,19 @@ footer {
     color: aliceblue;
 }
 
+#data-table, form {
+    width: 100%;
+    text-align: left;
+    overflow: scroll;
+}
+
+#data-table > table {
+    width: 100%;
+    text-align: left;
+    overflow: scroll;
+}
+
+
 @media screen and (max-width: 768px) {
     nav, .container {
         flex-direction: column;
@@ -94,4 +107,8 @@ footer {
 
 .show {
     display: inherit;
+}
+
+.hide {
+    display: none;
 }
