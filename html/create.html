@@ -31,7 +31,7 @@
             <div id="data-table">
 
             </div>
-            
+
             <form id="data-form" class="container">
                 <fieldset id="which-table">
                     <legend>What would you like?</legend>
@@ -41,7 +41,9 @@
                         <option value="Weapon">Create a Weapon</option>
                     </select>
                 </fieldset>
+            </form>
 
+            <form id="character-info">
                 <fieldset id="character-info">
                     <legend>Character Information</legend>
 
@@ -65,9 +67,13 @@
 
                     <label for="background">Background:</label>
                     <input type="text" name="background" id="background" maxlength="64" size="32" placeholder="Character Background"><br>
-                </fieldset>
 
-                <fieldset id="weapon-info" class="hide">
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+
+            <form id="weapon-info" class="hide">
+                <fieldset>
                     <legend>Weapon Information</legend>
 
                     <label for="name">Name:</label>
@@ -108,6 +114,8 @@
     </footer>
 
     <script src="../js/navbar.js"></script>
+    <script src="../js/table-manager.js"></script>
+    <script src="../js/character.js"></script>
     <script src="../js/create.js"></script>
 </body>
 </html>

@@ -8,7 +8,7 @@ function Character(name, race, subrace, character_class, level, archetype, backg
     this.background = background;
     this.id = id;
 
-    const characterHeaders = ['Id', 'Name', 'Race', 'SubRace', 'Class', 'Level', 'Archetype', 'Background'];
+    const characterHeaders = ['id', 'name', 'race', 'subrace', 'character_class', 'level', 'archetype', 'background'];
 
     function renderCharacterTable(characters, containerElement) {
         const tableManager = new TableManager();

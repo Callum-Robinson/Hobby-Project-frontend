@@ -1,7 +1,6 @@
 (function() {
     const requestSelector = document.querySelector('#method');
     const dataTable = document.querySelector('#data-table');
-    const dataForm = document.querySelector('#data-form');
     const characterForm = document.querySelector('#character-info');
     const weaponForm = document.querySelector('#weapon-info');
 
@@ -30,6 +29,29 @@
     }
 
     function createCharacter() {
-        const formData = new 
+        const characterData = new FormData(characterForm);
+        const characterFormDataObject = Object.fromEntries(characterData.entries())
+
+        fetch('http://localhost:8080/character', {
+            method: 'POST',
+            body: JSON.stringify(createCharacterFromFormObj(characterFormDataObject)),
+            headers: {
+                'Content-type': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) return response.json();
+            else throw new Error("Something went wrong");
+        }).then(character => {
+            renderCharacterTable([character], dataTable);
+        }).catch(error => {
+            console.error(error);
+        });
     }
+
+    function handleFormSubmission(event) {
+        event.preventDefault();
+        createCharacter();
+    }
+
+    characterForm.addEventListener('submit', handleFormSubmission);
 })();
