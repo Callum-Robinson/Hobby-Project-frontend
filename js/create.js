@@ -25,7 +25,7 @@
     });
 
     function createCharacterFromFormObj(dataObject) {
-        const character = new character(dataObject.name, dataObject.race, dataObject.subrace, dataObject.character_class, dataObject.level, dataObject.archetype, dataObject.background);
+        const character = new Character(dataObject.name, dataObject.race, dataObject.subrace, dataObject.character_class, dataObject.level, dataObject.archetype, dataObject.background);
         return character;
     }
 

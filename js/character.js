@@ -10,5 +10,9 @@ function Character(name, race, subrace, character_class, level, archetype, backg
 
     const characterHeaders = ['Id', 'Name', 'Race', 'SubRace', 'Class', 'Level', 'Archetype', 'Background'];
 
-   
+    function renderCharacterTable(characters, containerElement) {
+        const tableManager = new TableManager();
+        const table = tableManager.createTable(characterHeaders, characters);
+        containerElement.replaceChildren(table);
+    }
 }
