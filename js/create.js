@@ -23,4 +23,13 @@
             toggleForm("Weapon")
         }
     });
+
+    function createCharacterFromFormObj(dataObject) {
+        const character = new character(dataObject.name, dataObject.race, dataObject.subrace, dataObject.character_class, dataObject.level, dataObject.archetype, dataObject.background);
+        return character;
+    }
+
+    function createCharacter() {
+        const formData = new 
+    }
 })();
