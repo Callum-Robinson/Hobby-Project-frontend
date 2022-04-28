@@ -39,6 +39,19 @@
         });
     }
 
+    function readCharactersWeapons() {
+        fetch (`https//localhost:8080/${id.value}/weapons`, {
+            method: 'GET'
+        }).then(response => {
+            if (response.ok) return response.json()
+            else throw new Error('Something went wrong');
+        }).then(weapons => {
+            renderWeaponTable(weapons, dataTable);
+        }).catch(error => {
+            console.error(error);
+        });
+    }
+
     readAllCharacters();
 
     requestSelector.addEventListener('change', function(event) {
