@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Read</title>
+    <title>Delete</title>
 
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -19,8 +19,8 @@
     </nav>
 
     <header>
-        <h1>Read Characters and Weapons</h1>
-        <p>See the characters and weapons you've created</p>
+        <h1>Delete Characters and Weapons</h1>
+        <p>Remove items if youv'e been unlucky or have a cruel DM</p>
     </header>
 
     <div class="container">
@@ -33,16 +33,13 @@
                     <legend>Request type</legend>
                     <label for="method">Type:</label>
                     <select name="method" id="method">
-                        <option value="ALLCHARACTERS">Read a list of characters</option>
-                        <option value="IDCHARACTER">Read a character by their id</option>
-                        <option value="CHARACTERWEAPONS">Read a character's weapons</option>
-                        <option value="ALLWEAPONS">Read a list of weapons</option>
-                        <option value="IDWEAPON">Read a weapon by the id</option>
+                        <option value="CHARACTER">Delete a character with given id</option>
+                        <option value="WEAPON">Delete a weapon with the given id</option>
                     </select>
                 </fieldset>
 
-                <fieldset id="id-field" class="hide">
-                    <legend>Read id</legend>
+                <fieldset id="id-field">
+                    <legend>Delete id</legend>
                     <label for="id">ID:</label>
                     <input type="number" name="id" id="id">
                 </fieldset>
@@ -63,6 +60,6 @@
     <script src="../js/table-manager.js"></script>
     <script src="../js/character.js"></script>
     <script src="../js/weapon.js"></script>
-    <script src="../js/read.js"></script>
+    <script src="../js/delete.js"></script>
 </body>
 </html>

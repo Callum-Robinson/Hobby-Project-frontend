@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create</title>
+    <title>Update</title>
 
     <link rel="stylesheet" href="../css/style.css">
 </head>
@@ -19,8 +19,8 @@
     </nav>
 
     <header>
-        <h1>Create Characters and Weapons</h1>
-        <p>Add your ideas to the app here</p>
+        <h1>Update Characters and Weapons</h1>
+        <p>Update your characters and weapons here</p>
     </header>
 
     <div class="container">
@@ -37,8 +37,8 @@
                     <legend>What would you like?</legend>
                     <label for="method">Character or Weapon:</label>
                     <select name="method" id="method">
-                        <option value="Character">Create a Character</option>
-                        <option value="Weapon">Create a Weapon</option>
+                        <option value="Character">Update a Character</option>
+                        <option value="Weapon">Update a Weapon</option>
                     </select>
                 </fieldset>
             </form>
@@ -46,6 +46,9 @@
             <form id="character-info">
                 <fieldset id="character-info">
                     <legend>Character Information</legend>
+
+                    <label for="id">Id:</label>
+                    <input type="number" name="id" id="id" required placeholder="Id"><br>
 
                     <label for="name">Name:</label>
                     <input type="text" name="name" id="name" required minlength="3" maxlength="64" size="32" placeholder="Character Name"><br>
@@ -75,6 +78,9 @@
             <form id="weapon-info" class="hide">
                 <fieldset>
                     <legend>Weapon Information</legend>
+
+                    <label for="id">Id:</label>
+                    <input type="number" name="id" id="id" required placeholder="Id"><br>
 
                     <label for="character_id">Character Id:</label>
                     <input type="number" name="character_id" id="character_id" required placeholder="Char id"><br>
@@ -121,6 +127,6 @@
     <script src="../js/table-manager.js"></script>
     <script src="../js/character.js"></script>
     <script src="../js/weapon.js"></script>
-    <script src="../js/create.js"></script>
+    <script src="../js/update.js"></script>
 </body>
 </html>
