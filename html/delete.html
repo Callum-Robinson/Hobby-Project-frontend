@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <nav>
+        <a id="toggle">MENU</a>
+        <a class="nav-link " href="../index.html">HOME</a>
+        <a class="nav-link" href="./create.html">CREATE</a>
+        <a class="nav-link" href="./read.html">READ</a>
+        <a class="nav-link" href="./update.html">UPDATE</a>
+        <a class="nav-link" href="./delete.html">DELETE</a>
+    </nav>
+
+    <header>
+        <h1>Delete Characters and Weapons</h1>
+        <p>Remove items if youv'e been unlucky or have a cruel DM</p>
+    </header>
+
+    <div class="container">
+        <section id="banner">
+            <img src="https://media.dnd.wizards.com/styles/news_banner_header/public/images/head-banner/bg-heroes_0.jpg" alt="Dnd banner" width="100%">
+        </section>
+        <main class="container">
+            <form id="data-form">
+                <fieldset id="request-type">
+                    <legend>Request type</legend>
+                    <label for="method">Type:</label>
+                    <select name="method" id="method">
+                        <option value="CHARACTER">Delete a character with given id</option>
+                        <option value="WEAPON">Delete a weapon with the given id</option>
+                    </select>
+                </fieldset>
+
+                <fieldset id="id-field">
+                    <legend>Delete id</legend>
+                    <label for="id">ID:</label>
+                    <input type="number" name="id" id="id">
+                </fieldset>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="data-table">
+
+            </div>
+        </main>
+    </div>
+
+
+    <footer>
+        <p><small>Callum Robinson - Copyright &copy; 2022</small></p>
+    </footer>
+
+    <script src="../js/navbar.js"></script>
+    <script src="../js/table-manager.js"></script>
+    <script src="../js/character.js"></script>
+    <script src="../js/weapon.js"></script>
+    <script src="../js/delete.js"></script>
+</body>
+</html>
