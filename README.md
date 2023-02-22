@@ -8,6 +8,7 @@ This repo is the front-end pages to send fetch requests to the back-end spring a
 The back-end can be found at https://github.com/Callum-Robinson/hobby-project-backend
 
 The kanban board can be found at: https://callumjrobinson.atlassian.net/jira/software/projects/HP/boards/3
+(May be unavailable when viewing later)
 
 
 
